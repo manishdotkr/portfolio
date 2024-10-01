@@ -1,0 +1,50 @@
+name: Deploy React App
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: "Do you want to deploy?"
+        required: true
+        default: "No"
+        type: choice
+        options:
+          - "No"
+          - "Yes"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build
+
+      - name: Check if deployment is allowed
+        id: deploy_check
+        run: |
+          if [ "${{ github.event_name }}" == "push" ]; then
+            echo "Deploy=Yes" >> $GITHUB_ENV
+          elif [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "Deploy=${{ github.event.inputs.deploy }}" >> $GITHUB_ENV
+          fi
+
+      - name: Deploy to GitHub Pages
+        if: env.Deploy == 'Yes'
+        run: npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
