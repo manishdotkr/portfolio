@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Components
 import Sidebar from "./components/Sidebar";
 import Navbar from './components/Navbar';
+import NotFound from "./components/NotFound";
 //Pages
 import About from './pages/About';
 import Career from './pages/Career';
@@ -27,6 +28,7 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </Router>
