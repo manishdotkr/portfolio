@@ -9,7 +9,7 @@
 /coverage
 
 # production
-/build
+# /build   #removing build for hosting the site on github pages
 
 # misc
 .DS_Store
