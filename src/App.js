@@ -1,10 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 // Components
 import Sidebar from "./components/Sidebar";
 import Navbar from './components/Navbar';
 import NotFound from "./components/NotFound";
-//Pages
+// Pages
 import About from './pages/About';
 import Career from './pages/Career';
 import Resume from './pages/Resume';
