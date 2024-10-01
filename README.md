@@ -1,15 +1,15 @@
-# Manish Kumar - Portfolio Website
+# Manish Kumar - React Portfolio Website
 
-Welcome to my personal portfolio website! This project showcases my work, including important links, projects, an about section, and ways to contact me. 
+Welcome to the updated version of my personal portfolio website, now built with **React.js**! This project is designed to showcase my skills, projects, and provide easy ways to get in touch with me.
 
 ## Website Structure
 
-The website consists of several sections including:
-- **Home:** Introduction and hero section.
-- **Important Links:** Access to key external resources.
-- **Projects:** Showcase of the projects I've worked on.
+The website includes the following sections:
 - **About:** Information about me and my background.
-- **Contact:** Social media links and contact information.
+- **Career:** Overview of my professional journey.
+- **Portfolio:** Projects that I have worked on.
+- **Blog:** My thoughts and writings on various topics.
+- **Contact:** Social media links and ways to get in touch.
 
 ### Table of Contents
 1. [Project Description](#project-description)
@@ -21,10 +21,10 @@ The website consists of several sections including:
 
 ## Project Description
 
-This portfolio website is designed to provide a clean and simple interface to showcase my skills and projects. The layout includes:
-- A **hero section** with a welcome message and a link to my [Confluence Page](https://confluence.external-share.com/content/778735b3-5292-4bcc-8689-db202c43665b).
-- Links to important sections of my site such as **Projects**, **About**, and **Contact**.
-- A **footer section** with social media links, including GitHub, LinkedIn, Facebook, and Instagram.
+This portfolio website offers a clean, modern interface for navigating through my work and experiences. The site is fully responsive and leverages React.js for an interactive and dynamic user experience. Key features include:
+- **Sidebar Navigation** for easy access to different sections.
+- **Navbar** that updates based on the active page.
+- Separate pages for **About**, **Career** , **Resume**, **Portfolio**, **Blog**, and **Contact**.
 
 ## Installation
 
@@ -40,20 +40,28 @@ To run this project locally:
    cd portfolio
    ```
 
-3. Open `index.html` in your browser to view the site:
+3. Install dependencies:
    ```bash
-   open index.html
+   npm install
    ```
+
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+
+5. Open your browser and visit `http://localhost:3000` to view the site.
 
 ## Usage
 
-- Explore different sections using the navigation bar.
-- Check out my **projects** to see what I’ve been working on.
-- Visit my social media profiles and Confluence page linked in the footer.
+- Navigate through the website using the sidebar or navbar.
+- Explore my **Portfolio** to see my projects.
+- Visit the **Blog** for articles on topics of interest.
+- Check out the **Contact** page to connect via social media or email.
 
 ## Technologies Used
 
-- **HTML5** for structuring the website.
-- **CSS3** for styling and layout.
-- **JavaScript** for interactive elements.
-- **Icons** and images for branding and social media links.
+- **React.js** for the overall structure and components.
+- **React Router** for handling navigation between pages.
+- **CSS3** for styling and responsive design.
+- **JavaScript (ES6+)** for functionality and interactivity.
