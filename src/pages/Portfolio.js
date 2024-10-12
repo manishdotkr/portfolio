@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import portfolioConfig from "../config/portfolioConfig";
+import { IonIcon } from "@ionic/react";
+import { eyeOutline } from "ionicons/icons";
 
 const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -69,7 +71,7 @@ const ProjectList = ({ filteredProjects }) => {
           <a href={project.link} target="_blank" rel="noreferrer">
             <figure className="project-img">
               <div className="project-item-icon-box">
-                <ion-icon name="eye-outline"></ion-icon>
+                <IonIcon icon={eyeOutline} />
               </div>
               <img src={project.image} alt={project.alt} loading="lazy" />
             </figure>
