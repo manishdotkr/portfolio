@@ -1,0 +1,62 @@
+# This pipeline is designed to build a React static pages from the repository
+# and push it to github pages for static deployment
+
+name: Build and deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout the code
+        uses: actions/checkout@v4
+
+      - name: Setting up node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: install dependencies
+        run: npm install
+
+      - name: build static pages
+        run: npm run build
+
+      - name: configure pages
+        uses: actions/configure-pages@v3
+
+      - name: upload artifact to github pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+
+      - name: deploy static pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+############################ NOTES ############################ 
+# permissions block is necessary for github workflow to be able to work
+# environment block is necessary otherwise "deploy static pages" will throw error
+# must add homepage block in package.json otherwise it'll show blank screen
+# keep the "package-lock.json" fresh by running "npm i"
+# import css only in index.js
