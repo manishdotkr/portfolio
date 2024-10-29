@@ -9,10 +9,6 @@ const Resume = () => {
     setLoading(false);
   };
 
-  const openInNewTab = () => {
-    window.open(resumeConfig.url, "_blank");
-  };
-
   return (
     <article className="resume" data-page="resume">
       <header>
