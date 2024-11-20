@@ -1,6 +1,8 @@
 import React from "react";
 import { IonIcon } from "@ionic/react";
 import { bookOutline } from "ionicons/icons";
+import "../assets/css/carrer.css"
+
 import {
   educationConfig,
   experienceConfig,

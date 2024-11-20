@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LoadingSpinner from '../components/LoadingSpinner'
 import contactConfig from '../config/contactConfig';
+import "../assets/css/contact.css"
 
 const Contact = () => {
   const [loading, setLoading] = useState(true);

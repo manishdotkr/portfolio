@@ -1,6 +1,8 @@
 import React from "react";
 import aboutConfig from "../config/aboutConfig";
 
+import "../assets/css/about.css"
+
 function About() {
   return (
     <article className="about" data-page="about">

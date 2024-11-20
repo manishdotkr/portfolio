@@ -9,7 +9,7 @@ import About from './pages/About';
 import Career from './pages/Career';
 import Resume from './pages/Resume';
 import Portfolio from './pages/Portfolio';
-import Blog from './pages/Blog';
+import Project from './pages/Project';
 import Contact from './pages/Contact';
 // CSS
 import './assets/css/style.css';
@@ -26,7 +26,7 @@ function App() {
             <Route path="/career" element={<Career />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/project" element={<Project />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

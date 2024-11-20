@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { IonIcon } from "@ionic/react";
 import { chevronDown } from "ionicons/icons";
+import "../assets/css/sidebar.css"
 import {
   personalConfig,
   contactConfig,

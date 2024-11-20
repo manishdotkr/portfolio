@@ -16,8 +16,8 @@ const navComponents = [
       to: "/portfolio",
     },
     {
-      page: "Blog",
-      to: "/blog",
+      page: "Project",
+      to: "/project",
     },
     {
       page: "Contact",
