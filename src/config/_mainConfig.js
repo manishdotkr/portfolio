@@ -4,7 +4,7 @@ import { mailOutline, phonePortraitOutline, calendarOutline, locationOutline, lo
 export const personalConfig = {
   avatar: avatar,
   name: `Manish Kumar`,
-  designation: `Associate DevOps Engineer`,
+  designation: `DevOps Engineer`,
 };
 
 export const contactConfig = [
