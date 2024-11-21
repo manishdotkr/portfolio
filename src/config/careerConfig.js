@@ -18,7 +18,7 @@ export const educationConfig = [
 
 export const experienceConfig = [
   {
-    designation: "Associate Engineer, DevOps and Cloud Technologies",
+    designation: "DevOps and Cloud Engineer",
     tenure: "Oct, 2022 — Present",
     name: "Impressico Business Solutions",
   },
