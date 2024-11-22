@@ -2,15 +2,12 @@ import React, { useState } from "react";
 import portfolioConfig from "../config/portfolioConfig";
 import { IonIcon } from "@ionic/react";
 import { eyeOutline } from "ionicons/icons";
-
 import "../assets/css/portfolio.css"
 
 const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
-
   const categories = [...portfolioConfig.categories];
   const projects = [...portfolioConfig.projects];
-
   const filteredProjects =
     selectedCategory === "All"
       ? projects
@@ -21,7 +18,6 @@ const Portfolio = () => {
       <header>
         <h2 className="h2 article-title">Portfolio</h2>
       </header>
-
       <section className="projects">
         <FilterList
           categories={categories}
@@ -41,8 +37,8 @@ const FilterList = ({ categories, selectedCategory, setSelectedCategory }) => {
 
   return (
     <ul className="filter-list">
-      {categories.map((category) => (
-        <li key={category} className="filter-item">
+      {categories.map((category, index) => (
+        <li key={`category-${index}`} className="filter-item">
           <button
             className={selectedCategory === category ? "active" : ""}
             onClick={() => handleCategoryClick(category)}
@@ -59,9 +55,9 @@ const FilterList = ({ categories, selectedCategory, setSelectedCategory }) => {
 const ProjectList = ({ filteredProjects }) => {
   return (
     <ul className="project-list">
-      {filteredProjects.map((project) => (
+      {filteredProjects.map((project, index) => (
         <li
-          key={project.id}
+          key={`project-${index}`}
           className="project-item active"
           data-filter-item
           data-category={project.category}
@@ -71,7 +67,11 @@ const ProjectList = ({ filteredProjects }) => {
               <div className="project-item-icon-box">
                 <IonIcon icon={eyeOutline} />
               </div>
-              <img src={require(`../assets/images/links/${project.image}`)} alt={project.title} loading="lazy" />
+              <img 
+                src={require(`../assets/images/links/${project.image}`)} 
+                alt={project.title} 
+                loading="lazy" 
+              />
             </figure>
             <h3 className="project-title">{project.title}</h3>
             <p className="project-category">{project.category}</p>

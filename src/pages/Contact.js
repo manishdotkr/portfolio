@@ -4,6 +4,8 @@ import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 import LoadingSpinner from "../components/LoadingSpinner";
 import contactConfig from "../config/contactConfig";
+import { IonIcon } from "@ionic/react";
+import { paperPlane } from "ionicons/icons";
 import "../assets/css/contact.css";
 
 const {
@@ -108,7 +110,7 @@ const Contact = () => {
             data-form-input
           ></textarea>
           <button className="form-btn" type="submit" value="Send" data-form-btn>
-            <ion-icon name="paper-plane" />
+            <IonIcon icon={paperPlane} />
             <span>Send Message</span>
           </button>
         </form>

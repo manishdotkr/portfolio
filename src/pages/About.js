@@ -1,6 +1,5 @@
 import React from "react";
 import aboutConfig from "../config/aboutConfig";
-
 import "../assets/css/about.css"
 
 function About() {
@@ -22,7 +21,6 @@ function About() {
 
 function ServiceList() {
   const serviceList = [...aboutConfig.serviceList];
-
   serviceList.forEach((obj, idx) => {
     obj.icon = require(`../assets/images/svg/icon-${idx + 1}.svg`);
   });
@@ -31,8 +29,8 @@ function ServiceList() {
     <section className="service">
       <h3 className="h3 service-title">What I'm doing</h3>
       <ul className="service-list">
-        {serviceList.map((service) => (
-          <li className="service-item">
+        {serviceList.map((service, index) => (
+          <li key={`service-${index}`} className="service-item">
             <div className="service-icon-box">
               <img
                 src={service.icon}
@@ -53,7 +51,6 @@ function ServiceList() {
 
 function Testimonials() {
   const testimonialsList = [...aboutConfig.testimonialsList];
-
   testimonialsList.forEach((obj, idx) => {
     obj.avatar = require(`../assets/images/avatar/avatar-${idx + 1}.png`);
   });
@@ -62,8 +59,8 @@ function Testimonials() {
     <section className="testimonials">
       <h3 className="h3 testimonials-title">Testimonials</h3>
       <ul className="testimonials-list has-scrollbar">
-        {testimonialsList.map((witness) => (
-          <li className="testimonials-item">
+        {testimonialsList.map((witness, index) => (
+          <li key={`testimonial-${index}`} className="testimonials-item">
             <div className="content-card" data-testimonials-item>
               <figure className="testimonials-avatar-box">
                 <img
@@ -95,12 +92,13 @@ function Clients() {
   clientsList.forEach((obj, idx) => {
     obj.logo = require(`../assets/images/logos/logo-${idx + 1}-color.png`);
   });
+
   return (
     <section className="clients">
       <h3 className="h3 clients-title">Clients</h3>
       <ul className="clients-list has-scrollbar">
-        {clientsList.map((client) => (
-          <li className="clients-item">
+        {clientsList.map((client, index) => (
+          <li key={`client-${index}`} className="clients-item">
             <a href={client.link} target="_blank" rel="noreferrer">
               <img src={client.logo} alt="Client logo" />
             </a>
