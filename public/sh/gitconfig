@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Content to be added
+CONTENT="
+[user]
+    name = manishdotkr
+    email = officialmanishkr98@gmail.com
+[credential]
+    helper = store
+    username = manishdotkr
+"
+
+# Check if the .git/config file exists
+if [ -f ".git/config" ]; then
+    # Append the content to the file
+    echo "$CONTENT" >> .git/config
+    echo "Configuration added successfully to .git/config."
+else
+    echo "Error: .git/config file not found. Please ensure you're in the root directory of a Git repository."
+fi
