@@ -4,7 +4,7 @@ const navComponents = [
       to: "/",
     },
     {
-      page: "Carrer",
+      page: "Career",
       to: "/career",
     },
     {
