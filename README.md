@@ -63,5 +63,6 @@ To run this project locally:
 
 - **React.js** for the overall structure and components.
 - **React Router** for handling navigation between pages.
+- **Ionic Component** for logos
 - **CSS3** for styling and responsive design.
 - **JavaScript (ES6+)** for functionality and interactivity.
