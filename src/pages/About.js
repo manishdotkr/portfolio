@@ -56,7 +56,7 @@ function Testimonials() {
   });
 
   return (
-    <section className="testimonials">
+    <section className="testimonials" style={{ display: "none" }}>
       <h3 className="h3 testimonials-title">Testimonials</h3>
       <ul className="testimonials-list has-scrollbar">
         {testimonialsList.map((witness, index) => (
@@ -94,7 +94,7 @@ function Clients() {
   });
 
   return (
-    <section className="clients">
+    <section className="clients" style={{ display: "none" }}>
       <h3 className="h3 clients-title">Clients</h3>
       <ul className="clients-list has-scrollbar">
         {clientsList.map((client, index) => (
